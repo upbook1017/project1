@@ -50,7 +50,7 @@ main nav ul li {
 main a:link { color:#81BEF7;}
 main a:visited { color:#81BEF7;}
 main a:hover { color:#F7BE81;}
-main a { 
+main a {
 			padding: 5px;
 			border: solid #6E6E6E;
 		}
@@ -59,7 +59,7 @@ input {
 			font-size: 16px;
 		}
 
-.kensaku {
+.search {
 				margin-left: 205px;
 				width: 300px;
 			}
@@ -80,23 +80,23 @@ table td {
 			background-color: #e6f1f6;
 		}
 
-.hinichi {
+.date {
 		width: 200px;
 	}
 
-.naiyou {
+.contents {
 		width: 550px;
 	}
 
-.kazu {
+.people {
 		width: 110px;
 	}
 
-.hinichitext ,.kazutext {
+.datetext ,.peopletext {
 		text-align: center;
 	}
 
-.naiyoutext {
+.contents {
 			padding: 0px 0px 0px 10px;
 	}
 

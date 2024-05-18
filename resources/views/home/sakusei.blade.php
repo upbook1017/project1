@@ -1,49 +1,49 @@
 @extends('layouts.kejiban')
 
 <style>
-    ul#sakusei1 {
+    ul#create1 {
         margin: 15px auto 0px;
     }
 
-    table#sakusei1 {
+    table#create1 {
         padding: 0px 0px;
         margin: 0px 0px 0px 212px;
         border: #FFFFFF;
     }
 
-    table#sakusei1 tr .error1 {
+    table#create1 tr .error1 {
         background-color: #FFFFFF;
         color: #FF0000;
     }
 
-    table#sakusei1 tr .myname1 {
+    table#create1 tr .myname1 {
         text-align: left;
     }
 
-    table#sakusei1 tr td {
+    table#create1 tr td {
         background-color: #FFFFFF;
     }
 
-    table#sakusei2 {
+    table#create2 {
         padding: 0px 0px;
         margin: 0px 0px 0px 212px;
         border: #FFFFFF;
     }
 
-    table#sakusei2 tr .error2 {
+    table#create2 tr .error2 {
         background-color: #FFFFFF;
         color: #FF0000;
     }
 
-    table#sakusei2 tr .wadaimei1 {
+    table#create2 tr .topic1 {
         text-align: left;
     }
 
-    table#sakusei2 tr td {
+    table#create2 tr td {
         background-color: #FFFFFF;
     }
 
-    table#sakusei2 td .wadaimei2 {
+    table#create2 td .topic2 {
         width: 250px;
     }
 
@@ -76,11 +76,11 @@
     <main>
         <h1>新規話題作成</h1>
         <nav>
-            <ul id="sakusei1">
+            <ul id="create1">
                 <li><a href="home">一覧に戻る</a></li>
             </ul>
         </nav>
-        <table id="sakusei1">
+        <table id="create1">
             @csrf
             <tr>
                 <td colspan="2" class="error1">ニックネームを入力してください。</td>
@@ -92,14 +92,14 @@
                 </td>
             </tr>
         </table>
-        <table id="sakusei2">
+        <table id="create2">
             <tr>
                 <td colspan="2" class="error2">話題名を入力してください。</td>
             </tr><!--エラーメッセージ用-->
             <tr>
-                <th class="wadaimei1">話題名：</th>
+                <th class="topic1">話題名：</th>
                 <td>
-                    <input type="text" name="wadai" value="" class="wadaimei2" placeholder="15文字以内">
+                    <input type="text" name="topic" value="" class="topic2" placeholder="15文字以内">
                 </td>
             </tr>
         </table>

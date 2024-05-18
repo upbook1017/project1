@@ -1,7 +1,7 @@
 @extends('layouts.kejiban')
 
 <style>
-    ul#wadai1 {
+    ul#topic1 {
         margin: 15px auto 15px;
     }
 
@@ -16,40 +16,40 @@
         margin-bottom: 5px;
     }
 
-    table#wadai1 {
+    table#topic1 {
         padding: 0px 0px;
         margin: 0px 0px 0px 212px;
         border: #FFFFFF;
     }
 
-    table#wadai1 tr .error1 {
+    table#topic1 tr .error1 {
         background-color: #FFFFFF;
         color: #FF0000;
     }
 
-    table#wadai1 tr .myname1 {
+    table#topic1 tr .myname1 {
         text-align: left;
     }
 
-    table#wadai1 tr td {
+    table#topic1 tr td {
         background-color: #FFFFFF;
     }
 
-    table#wadai2 {
+    table#topic2 {
         padding: 0px 0px;
         margin: 0px 0px 0px 212px;
         border: #FFFFFF;
     }
 
-    table#wadai2 tr .wadaimei1 {
+    table#topic2 tr .topic1 {
         text-align: left;
     }
 
-    table#wadai2 tr td {
+    table#topic2 tr td {
         background-color: #FFFFFF;
     }
 
-    table#wadai2 td .wadaimei2 {
+    table#topic2 td .topic2 {
         width: 250px;
     }
 
@@ -82,23 +82,23 @@
     <main>
         <h1>話題内容</h1>
         <nav>
-            <ul id="wadai1">
+            <ul id="topic1">
                 <li><a href="home">一覧に戻る</a></li>
             </ul>
         </nav>
 
         <div class="scroll">
-            <table id="wadai2">
+            <table id="topic2">
                 <tr>
-                    <th class="wadaimei1">話題名：</th>
+                    <th class="topic1">話題名：</th>
                     <td>
-                        <input type="text" name="wadai" value="" class="wadaimei2" placeholder="15文字以内">
+                        <input type="text" name="topic" value="" class="topic2" placeholder="15文字以内">
                     </td>
                 </tr>
             </table>
         </div>
 
-        <table id="wadai1">
+        <table id="topic1">
             @csrf
             <tr>
                 <td colspan="2" class="error1">ニックネームを入力してください。</td>

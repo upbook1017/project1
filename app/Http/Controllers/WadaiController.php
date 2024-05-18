@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class WadaiController extends Controller
+class topicController extends Controller
 {
     public function index()
     {
         $data =[
             'msg'=>'これはblade',
         ];
-        return view('home.wadai', $data);
+        return view('home.topic', $data);
     }
 }
