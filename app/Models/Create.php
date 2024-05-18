@@ -11,8 +11,13 @@ class Create extends Model
 
     public static $rules = array(
         'name' => 'repuired',
-        'topic' => 'topic',
-        'comment' => '',
+        'topic' => 'required|min:0|max:20',
+        'comment' => 'required|min:0|max:100',
     );
-    use HasFactory;
+    //use HasFactory;とりあえずコメント化
+
+    public function getData()
+    {
+        return $this->id . ': ' . $this->name . $this->topic . $this->comment;
+    }
 }

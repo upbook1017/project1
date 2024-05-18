@@ -80,31 +80,36 @@
                 <li><a href="home">一覧に戻る</a></li>
             </ul>
         </nav>
-        <table id="create1">
-            @csrf
-            <tr>
-                <td colspan="2" class="error1">ニックネームを入力してください。</td>
-            </tr><!--エラーメッセージ用-->
-            <tr>
-                <th class="myname1">ニックネーム：</th>
-                <td>
-                    <input type="text" name="name" value="" class="myname2" placeholder="10文字以内">
-                </td>
-            </tr>
-        </table>
-        <table id="create2">
-            <tr>
-                <td colspan="2" class="error2">話題名を入力してください。</td>
-            </tr><!--エラーメッセージ用-->
-            <tr>
-                <th class="topic1">話題名：</th>
-                <td>
-                    <input type="text" name="topic" value="" class="topic2" placeholder="20文字以内">
-                </td>
-            </tr>
-        </table>
-        <p class="error3">投稿内容を入力してください。</p><!--エラーメッセージ用-->
-        <textarea class="comment" name="comment" rows="20" placeholder="投稿内容(100文字以内)" required></textarea>
-        <input type="submit" value="投稿" class="posts">
+        <form action="/home/topic" method="post"><!--なぜかform属性記入後デザインがおかしくなる-->
+
+            <table id="create1">
+                @csrf
+                <tr>
+                    <td colspan="2" class="error1">ニックネームを入力してください。</td>
+                </tr><!--エラーメッセージ用-->
+                <tr>
+                    <th class="myname1">ニックネーム：</th>
+                    <td>
+                        <input type="text" name="name" value="{{ 'name' }}" class="myname2" placeholder="10文字以内">
+                    </td>
+                </tr>
+            </table>
+            <table id="create2">
+                <tr>
+                    <td colspan="2" class="error2">話題名を入力してください。</td>
+                </tr><!--エラーメッセージ用-->
+                <tr>
+                    <th class="topic1">話題名：</th>
+                    <td>
+                        <input type="text" name="topic" value="{{ 'topic' }}" class="topic2"
+                            placeholder="20文字以内">
+                    </td>
+                </tr>
+            </table>
+            <p class="error3">投稿内容を入力してください。</p><!--エラーメッセージ用-->
+            <textarea class="comment" name="comment" value="{{ 'comment' }}" rows="20" placeholder="投稿内容(100文字以内)"
+                required></textarea>
+            <input type="submit" value="投稿" class="posts">
+        </form>
     </main>
 @endsection
