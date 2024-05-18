@@ -44,7 +44,7 @@
     }
 
     table#create2 td .topic2 {
-        width: 250px;
+        width: 300px;
     }
 
     .error3 {
@@ -99,7 +99,7 @@
             <tr>
                 <th class="topic1">話題名：</th>
                 <td>
-                    <input type="text" name="topic" value="" class="topic2" placeholder="15文字以内">
+                    <input type="text" name="topic" value="" class="topic2" placeholder="20文字以内">
                 </td>
             </tr>
         </table>
