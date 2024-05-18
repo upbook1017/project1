@@ -65,7 +65,7 @@
         font-size: 16px;
     }
 
-    .toukou {
+    .posts {
         margin-left: 1028px;
         margin-top: 5px;
         margin-bottom: 112px;
@@ -105,6 +105,6 @@
         </table>
         <p class="error3">投稿内容を入力してください。</p><!--エラーメッセージ用-->
         <textarea class="comment" name="comment" rows="20" placeholder="投稿内容(100文字以内)" required></textarea>
-        <input type="submit" value="投稿" class="toukou">
+        <input type="submit" value="投稿" class="posts">
     </main>
 @endsection
