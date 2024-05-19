@@ -18,6 +18,6 @@ class createController extends Controller
             'comment' => $request->comment,
         ];
     DB::table('topics_data')->insert($param);
-    return redirect('/topic');//フォーム送信後、topic.blad.phpへ自動的にリダイレクト
+    return redirect('home.topic');//フォーム送信後、topic.blad.phpへ自動的にリダイレクト
     }
 }
