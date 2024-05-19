@@ -7,17 +7,17 @@ use Illuminate\Support\Facades\DB;
 
 class createController extends Controller
 {
-    public function create(Request $request)
+    public function create(Request $request)//create.blade.phpからのリクエスト
     {
-        return view('home.create');
+        return view('home.create');//入力フォーム(create.blade.php)
     }
-    public function create1(Request $request)
+    public function create1(Request $request)//DBのクエリビルダによるレコード追加
     {
         $param = [
             'topic' => $request->topic,
             'comment' => $request->comment,
         ];
     DB::table('topics_data')->insert($param);
-    return redirect('/topic');
+    return redirect('/topic');//フォーム送信後、topic.blad.phpへ自動的にリダイレクト
     }
 }

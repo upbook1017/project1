@@ -12,6 +12,6 @@ Route::get('/', function () {
 });*/
 
 Route::get('home', 'App\Http\Controllers\HomeController@index');
-Route::get('create', 'App\Http\Controllers\CreateController@create1');
-Route::post('create', 'App\Http\Controllers\CreateController@create');
+Route::get('create', 'App\Http\Controllers\CreateController@create');
+Route::post('create', 'App\Http\Controllers\CreateController@create1');
 Route::get('topic', 'App\Http\Controllers\TopicController@index');
