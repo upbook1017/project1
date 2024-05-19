@@ -3,21 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class createController extends Controller
 {
-    public function create1(Request $request)
+    public function create(Request $request)
     {
         return view('home.create');
     }
-
-    public function create(Request $request)
+    public function create1(Request $request)
     {
-        $this->validate($request, Create::$rules);
-        $create = new Create;
-        $form = $request->all();
-        unset($form['_token']);
-        $create->fill($form)->save();
-        return redirect('/create');
+        $param = [
+            'topic' => $request->topic,
+            'comment' => $request->comment,
+        ];
+    DB::table('topics_data')->insert($param);
+    return redirect('/topic');
     }
 }
