@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class createController extends Controller
+class CreateController extends Controller
 {
     public function create(Request $request)//create.blade.phpからのリクエスト
     {
@@ -17,7 +17,7 @@ class createController extends Controller
             'topic' => $request->topic,
             'comment' => $request->comment,
         ];
-    DB::table('topics_data')->insert($param);
-    return redirect('home.topic');//フォーム送信後、topic.blad.phpへ自動的にリダイレクト
+        DB::table('topics_data')->insert($param);
+        return redirect('home.topic');//フォーム送信後、topic.blad.phpへ自動的にリダイレクト
     }
 }
